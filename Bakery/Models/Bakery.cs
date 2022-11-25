@@ -10,5 +10,12 @@ namespace Bakery.Models
     {
       Quantity = quantity;
     }
+
+    public int BreadCost(int quantity)
+    {
+      int breadCost = 0;
+      breadCost = quantity * 5;
+      return breadCost;
+    }
   }
 }
