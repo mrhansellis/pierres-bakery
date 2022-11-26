@@ -57,7 +57,16 @@ namespace Bakery.Tests
       int customerInput = 1;
       Pastries newPastries = new Pastries(customerInput);
       int result = newPastries.PastryQuantity;
-      Assert.AreEqual(typeof(Pastries), newPastries.GetType());
+      Assert.AreEqual(customerInput, result);
+    }
+    [TestMethod]
+    public void Pastries_ReturnsCostOfPastries_Int()
+    {
+      int expectedCost = 7;
+      int customerInput = 4;
+      Pastries newPastries = new Pastries(customerInput);
+      int result = newPastries.PastryCost();
+      Assert.AreEqual(expectedCost, result);
     }
   }
 }
