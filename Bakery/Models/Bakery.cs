@@ -11,10 +11,18 @@ namespace Bakery.Models
       Quantity = quantity;
     }
 
-    public int BreadCost(int quantity)
+    public int BreadCost()
     {
       int breadCost = 0;
-      breadCost = quantity * 5;
+      int breadCount = Quantity;
+      if (breadCount >= 3)
+      {
+        breadCost = (breadCount * 5) - (( breadCount / 3) * 5);
+      }
+      else
+      {
+        breadCost = breadCount * 5;
+      }
       return breadCost;
     }
   }

@@ -28,7 +28,16 @@ namespace Bakery.Tests
       int expectedCost = 5;
       int customerInput = 1;
       Bread newBread = new Bread(customerInput);
-      int result = newBread.BreadCost(customerInput);
+      int result = newBread.BreadCost();
+      Assert.AreEqual(expectedCost, result);
+    }
+    [TestMethod]
+    public void BreadPrice_ReturnPriceOfMultipleLoafs_Int()
+    {
+      int expectedCost = 25;
+      int customerInput = 7;
+      Bread newBread = new Bread(customerInput);
+      int result = newBread.BreadCost();
       Assert.AreEqual(expectedCost, result);
     }
   }
