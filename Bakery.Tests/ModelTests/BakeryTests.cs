@@ -41,4 +41,23 @@ namespace Bakery.Tests
       Assert.AreEqual(expectedCost, result);
     }
   }
+  [TestClass]
+  public class PastryTests
+  {
+    [TestMethod]
+    public void Pastries_CreatesInstanceOfPastries_Pastry()
+    {
+      int customerInput = 1;
+      Pastries newPastries = new Pastries(customerInput);
+      Assert.AreEqual(typeof(Pastries), newPastries.GetType());
+    }
+    [TestMethod]
+    public void Pastries_SetsNumberOfPastries_Int()
+    {
+      int customerInput = 1;
+      Pastries newPastries = new Pastries(customerInput);
+      int result = newPastries.PastryQuantity;
+      Assert.AreEqual(typeof(Pastries), newPastries.GetType());
+    }
+  }
 }
