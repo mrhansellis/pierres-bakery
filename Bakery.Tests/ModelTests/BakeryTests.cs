@@ -68,5 +68,14 @@ namespace Bakery.Tests
       int result = newPastries.PastryCost();
       Assert.AreEqual(expectedCost, result);
     }
+    [TestMethod]
+    public void Pastries_ReturnsCostOfUnderThreePastries_Int()
+    {
+      int expectedCost = 4;
+      int customerInput = 2;
+      Pastries newPastries = new Pastries(customerInput);
+      int result = newPastries.PastryCost();
+      Assert.AreEqual(expectedCost, result);
+    }
   }
 }

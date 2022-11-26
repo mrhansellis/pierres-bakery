@@ -15,8 +15,14 @@ namespace Bakery.Models
     {
       int pastryCost = 0;
       int pastryCount = PastryQuantity;
-
-      pastryCost = (((pastryCount - (pastryCount % 3)) / 3) * 5) + ((pastryCount % 3) * 2);
+      if (pastryCount > 2)
+      {
+        pastryCost = (((pastryCount - (pastryCount % 3)) / 3) * 5) + ((pastryCount % 3) * 2);
+      }
+      else
+      {
+        pastryCost = pastryCount * 2;
+      }
       return pastryCost;
     }
   }
